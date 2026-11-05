@@ -1,28 +1,27 @@
-				--First year
+				--First year 
+				--(Is the separation of module types appropriate for clean code?)
 --Fundamental modules
 INSERT INTO BIT_InfoSystems.dbo.first_year (Module_code, Module_description, Module_credits)
-VALUES
+Select source.module_code, source.module_description, source.Module_credits 
+FROM 
+	(VALUES
 ('AIM 111', 'Find, evaluate, process, manage and present information resources for academic purposes using appropriate technology.' , 4),
 ('AIM 121', 'Apply effective search strategies in different technological environments. Demonstrate the ethical and fair use of information resources. Integrate 21st-century communications into the management of academic information.' , 4),
 ('ALL 121', 'By the end of this module students should be able to cope more confidently and competently with the reading, writing and critical thinking demands that are characteristic of the field of Information Technology.' , 6),
-('UPO 112', 'None', 0);
-GO
+('UPO 112', 'None', 0),
+
 
 --Core modules
-INSERT INTO BIT_InfoSystems.dbo.first_year (Module_code, Module_description, Module_credits)
-VALUES
 ('INF 112', 'Introduction to information systems, information systems in organisations, hardware: input, processing, output, software: systems and application software, organisation of data and information, telecommunications and networks, the Internet and Intranet. Transaction processing systems, management information systems, decision support systems, information systems in business and society, systems analysis, systems design, implementation, maintenance and revision.' , 10),
 ('INF 113', 'Introduction to quantitative methods for Information systems to students.' , 10),
 ('INF 154', 'Introduction to programming.' , 10),
 ('INF 164', 'Programming.' , 10),
 ('INF 171', 'General systems theory, creative problem solving, the business analyst, systems development building blocks, systems analysis methods, process modelling and data modelling.' , 20),
 ('OBS 114', 'The entrepreneurial mind-set; managers and managing; values, attitudes, emotions, and culture: the manager as a person; ethics and social responsibility; decision making; leadership and responsible leadership; effective groups and teams; managing organizational structure and culture inclusive of the different functions of a generic organisation and how they interact (marketing; finance; operations; human resources and general management); contextualising Sustainable Development Goals (SDG) in each of the topics.' , 10),
-('OBS 124', 'Value chain management: functional strategies for competitive advantage; human resource management; managing diverse employees in a multicultural environment; motivation and performance; using advanced information technology to increase performance; production and operations management; financial management; corporate entrepreneurship.' , 10);
-GO
+('OBS 124', 'Value chain management: functional strategies for competitive advantage; human resource management; managing diverse employees in a multicultural environment; motivation and performance; using advanced information technology to increase performance; production and operations management; financial management; corporate entrepreneurship.' , 10),
+
 
 --Elective modules
-INSERT INTO BIT_InfoSystems.dbo.first_year (Module_code, Module_description, Module_credits)
-VALUES
 ('BEM 120', 'This module provides an overview of the fundamentals of marketing by considering the exchange process, customer value, marketing research and the development of a marketing plan. It also addresses the marketing mix elements with specific focus on the seven service marketing elements namely the service product, physical evidence, people, process, distribution, pricing and integrated marketing communication.' , 10),
 ('BME 120', 'Simple statistical analysis: Data collection and analysis: Samples, tabulation, graphical representation, describing location, spread and skewness. Introductory probability and distribution theory. Sampling distributions and the central limit theorem. Statistical inference: Basic principles, estimation and testing in the one- and two-sample cases (parametric and non-parametric). Introduction to experimental design. One- and twoway designs, randomised blocks. Multiple statistical analysis: Bivariate data sets: Curve fitting (linear and non-linear), growth curves. Statistical inference in the simple regression case. Categorical analysis: Testing goodness of fit and contingency tables. Multiple regression and correlation: Fitting and testing of models. Residual analysis. Computer literacy: Use of computer packages in data analysis and report writing.' , 16),
 ('EKN 110', 'This module deals with the core principles of economics. A distinction between macroeconomics and microeconomics is made. A discussion of the market system and circular flow of goods, services and money is followed by a section dealing with microeconomic principles, including demand and supply analysis, consumer behaviour and utility maximisation, production and the costs thereof, and the different market models and firm behaviour. Labour market institutions and issues, wage determination, as well as income inequality and poverty are also addressed. A section of money, banking, interest rates and monetary policy concludes the course.' , 10),
@@ -38,30 +37,33 @@ VALUES
 ('STC 121', 'This is a terminating module. Students can only get credit for one of the following two modules: STK 120 or STC 121 or STK 121. Sampling distributions. Estimation theory, i.e., point estimation and confidence intervals. Hypothesis testing of sampling averages and proportions (one and two-sample cases). Non-parametric methods. Analysis of variance. Categorical data analysis. Curve fitting and regression analysis. The analysis of time series. Statistical concepts are demonstrated and interpreted through Excel (practical coding) and simulation within a data science framework.' , 13),
 ('STC 122', 'Introduction to data and exploratory data analysis: Graphical representations and descriptive measures for numerical and categorical data; relationships between explanatory and response variables; data transformations. Foundations of inference: Simulation; sampling with and without replacement; confidence intervals with bootstrapping; hypothesis testing with randomization; inference with mathematical models (normal distribution and central limit theorem). Statistical inference: Inference for a single proportion, for comparing two proportions, for two-way tables, for a single mean, for comparing two independent means, for comparing paired means, and for comparing many means. Regression and inferential modelling: Correlation; simple linear regression models with numerical or categorical predictors; least squares regression; residual analysis; goodness-of-fit; outliers; prediction and extrapolation; inference. All module content is demonstrated and interpreted through practical coding and simulation within a data science framework. This module may be also presented as a Summer school for students who passed STK 120 or its equivalent with a final mark of at least 60% in Semester 2 of the prior year as well as for students who failed STC 122 during Semester 2 of the prior year.' , 13),
 ('STK 110', 'PART A: Mathematical concepts for the business student: Statistical applications of quantitative techniques. Systems of linear equations: solving and application. Differentiation: Rules and application using the rules. Optimisation, linear functions, non-linear functions, Integration: Rules and application using the rules, Marginal and total functions, Stochastic and deterministic variables in a statistical and practical context: producers'' and consumers'' surplus. Linear programming. Matrix algebra. Limits and continuity. PART B: Descriptive statistics: Sampling and the collection of data; frequency distributions and graphical representations. Descriptive measures of location and dispersion. Probability. Introductory probability theory and theoretical distributions. Statistical and mathematical concepts are demonstrated and interpreted through Excel (practical coding) and simulation within a data science framework. Exam entrance requires a subminimum of 40% in both Part A and Part B. To pass the module a student has to pass both Part A and Part B.' , 13),
-('STK 120', 'Students can only get credit for one of the following three modules: STK 120 or STK 121 or STC 121.These are terminating modules. Sampling distributions. Estimation theory, i.e. point estimation and confidence intervals. Hypothesis testing of sampling averages and proportions (one and two-sample cases). Non-parametric methods. Analysis of variance. Categorical data analysis. Curve fitting and regression analysis. The analysis of time series. Statistical concepts are demonstrated and interpreted through Excel (practical coding) and simulation within a data science framework.' , 13);
+('STK 120', 'Students can only get credit for one of the following three modules: STK 120 or STK 121 or STC 121.These are terminating modules. Sampling distributions. Estimation theory, i.e. point estimation and confidence intervals. Hypothesis testing of sampling averages and proportions (one and two-sample cases). Non-parametric methods. Analysis of variance. Categorical data analysis. Curve fitting and regression analysis. The analysis of time series. Statistical concepts are demonstrated and interpreted through Excel (practical coding) and simulation within a data science framework.' , 13)
+)
+AS Source(Module_code, Module_description, Module_credits)
+WHERE NOT EXISTS (
+    SELECT 1 
+    FROM bit_infosystems.dbo.first_year AS Target
+    WHERE Target.Module_code = Source.Module_code
+);
 GO
 
 				--Second year
 --Fundamental modules
 INSERT INTO BIT_InfoSystems.dbo.second_year (Module_code, Module_description, Module_credits)
-VALUES
-('JCP 202', 'The Joint Community Project module is a credit-bearing educational experience where students are not only actively engaging in interpersonal skills development but also participate in service activities in collaboration with community partners. Students are given the opportunity to practice and develop their interpersonal skills formally taught in the module by engaging in teamwork with fellow students from different disciplines and also with non-technical members of the community. The module intends for the student to develop through reflection, understanding of their own experience in a team-based workspace as well as a broader understanding of the application of their discipline knowledge and its potential impact in their communities, in this way also enhancing their sense of civic responsibility. Compulsory class attendance 1 week before Semester 1 classes commence.' , 8);
-GO
+SELECT source.module_code, source.module_description, source.module_credits
+FROM 
+    (VALUES
+('JCP 202', 'The Joint Community Project module is a credit-bearing educational experience where students are not only actively engaging in interpersonal skills development but also participate in service activities in collaboration with community partners. Students are given the opportunity to practice and develop their interpersonal skills formally taught in the module by engaging in teamwork with fellow students from different disciplines and also with non-technical members of the community. The module intends for the student to develop through reflection, understanding of their own experience in a team-based workspace as well as a broader understanding of the application of their discipline knowledge and its potential impact in their communities, in this way also enhancing their sense of civic responsibility. Compulsory class attendance 1 week before Semester 1 classes commence.' , 8),
 
 --Core modules
-INSERT INTO BIT_InfoSystems.dbo.second_year (Module_code, Module_description, Module_credits)
-VALUES
 ('FIL 251', 'In this module students are equipped with an understanding of the moral issues influencing human agency in economic and political contexts. In particular philosophy equips students with analytical reasoning skills necessary to understand and solve complex moral problems related to economic and political decision making. We demonstrate to students how the most important questions concerning the socio-economic aspects of our lives can be broken down and illuminated through reasoned debate. Examples of themes which may be covered in the module include justice and the common good, a moral consideration of the nature and role of economic markets on society, issues concerning justice and equality, and dilemmas of loyalty. The works of philosophers covered may for instance include that of Aristotle, Locke, Bentham, Mill, Kant, Rawls, Friedman, Nozick, Bernstein, Dworkin, Sandel, Walzer, MacIntyre, Bujo, Wiredu, and Gyekye.' , 10),
 ('INF 214', 'Database design: the relational model, structured query language (SQL), entity relationship modelling, normalisation, database development life cycle; practical introduction to database design. Databases: advanced entity relationship modelling and normalisation, object-oriented databases, database development life cycle, advanced practical database design.' , 14),
 ('INF 225', 'An overview of systems infrastructure and integration.' , 14),
 ('INF 261', 'Database management: transaction management, concurrent processes, recovery, database administration: new developments: distributed databases, client-server databases: practical implementation of databases.' , 7),
 ('INF 271', 'Systems analysis. Systems design: construction; application architecture; input design; output design; interface design; internal controls; program design; object design; project management; system implementation; use of computer-aided development tools.' , 14),
-('INF 272', 'Advanced programming.' , 14);
-GO
+('INF 272', 'Advanced programming.' , 14),
 
 --Elective modules
-INSERT INTO BIT_InfoSystems.dbo.second_year (Module_code, Module_description, Module_credits)
-VALUES
 ('BAC 200', 'To use a conceptual understanding of intermediate foundational knowledge of International Financial Reporting Standards (IFRS) in order to prepare, present and interpret company and basic group company financial statements in a familiar business context and to propose clear solutions with adequate justification to solve financial problems in an ethical manner.' , 32),
 ('BAC 201', 'To use a conceptual understanding of intermediate foundational knowledge of International Financial Reporting Standards (IFRS) in order to prepare, present and interpret company and basic group company financial statements in a familiar business context and to propose clear solutions with adequate justification to solve financial problems in an ethical manner.' , 32),
 ('BEL 200', 'This module introduces students to taxation in the context of its history, its basic principles and its interdisciplinary nature as it relates to policy, legislation and governance. It also addresses the inherent demand for ethical and responsible conduct by all tax practitioners/professionals and taxpayers in pursuit of sustainable development in South Africa. The module is principles-based and will enable a student to interpret and apply the fundamental principles and concepts of taxation, specifically related to the Income Tax Act (No. 58 of 1962). In addition, the module will enable a student to interpret and apply specific sections in the Income Tax Act relating to donations and deceased estates.' , 32),
@@ -79,22 +81,29 @@ VALUES
 ('OBS 220', 'Project management and negotiations: Introduction Project management concepts; needs identification; the project, the project manager and the project team; types of project organisations; project communication and documentation. Planning and control: planning, scheduling and schedule control of projects; resource considerations and allocations; cost planning and performance evaluation. Negotiation and collective bargaining: The nature of negotiation; preparation for negotiation; negotiating for purposes of climate creation; persuasive communication; handling conflict and aggression; specialised negotiation and collective bargaining in the South African context.' , 16),
 ('STK 210', 'Statistical problem solving. Causality, experimental and observational data. Probability theory. Multivariate random variables. Discrete and continuous probability distributions. Stochastic representations. Measures of association. Expected values and conditional expectation. Simulation techniques. Supporting mathematical concepts. Statistical concepts are demonstrated and interpreted through practical coding and simulation within a data science framework.' , 20),
 ('STK 220', 'Multivariate probability distributions. Sampling distributions and the central limit theorem. Frequentist and Bayesian inference. Statistical learning and decision theory. Simulation techniques enhancing statistical thinking. Supervised learning:  linear regression, estimation and inference. Non-parametric modelling. Supporting mathematical concepts. Statistical algorithms. Statistical concepts are demonstrated and interpreted through practical coding and simulation within a data science framework.' , 20),
-('WST 212', 'Introduction to Databases. Database design and use. Data preparation and extraction: basic SQL queries, SQL joins and subqueries. Statistical modelling using database structures. Aims of data analysis (descriptive, inferential and predictive). Stages of conducting a data analysis to solve real-world problems. Sources and types of data and characteristics of extremely large or complex data sets. Introductory machine learning concepts: bias/variance trade-off, model complexity, cross-validation, regularisation, overfitting/underfitting, precision, recall, F1 score, ROC curve and confusion matrix. Data visualisation, data wrangling, supervised learning (linear, local and logistic regression) and unsupervised learning (k-means clustering). Statistical concepts are demonstrated and interpreted through practical coding and simulation within a data science framework.' , 12);
+('WST 212', 'Introduction to Databases. Database design and use. Data preparation and extraction: basic SQL queries, SQL joins and subqueries. Statistical modelling using database structures. Aims of data analysis (descriptive, inferential and predictive). Stages of conducting a data analysis to solve real-world problems. Sources and types of data and characteristics of extremely large or complex data sets. Introductory machine learning concepts: bias/variance trade-off, model complexity, cross-validation, regularisation, overfitting/underfitting, precision, recall, F1 score, ROC curve and confusion matrix. Data visualisation, data wrangling, supervised learning (linear, local and logistic regression) and unsupervised learning (k-means clustering). Statistical concepts are demonstrated and interpreted through practical coding and simulation within a data science framework.' , 12)
+)
+AS Source(Module_code, Module_description, Module_credits)
+WHERE NOT EXISTS (
+    SELECT 1 
+    FROM bit_infosystems.dbo.second_year AS Target
+    WHERE Target.Module_code = Source.Module_code
+);
 GO
 
 				--Final year
 --Core modules
 INSERT INTO BIT_InfoSystems.dbo.final_year (Module_code, Module_description, Module_credits)
-VALUES
+SELECT source.module_code, source.module_description, source.module_credits
+FROM 
+    (VALUES
 ('INF 315', 'A review of current trends which are relevant to the application of information systems within a business environment.' , 15),
 ('INF 324', 'Information systems in organisations.' , 15),
 ('INF 354', 'Advanced programming.' , 15),
-('INF 370', 'Application of systems analysis and design in a practical project; programming; use of computer-aided development tools.' , 35);
-GO
+('INF 370', 'Application of systems analysis and design in a practical project; programming; use of computer-aided development tools.' , 35),
+
 
 --Elective modules
-INSERT INTO BIT_InfoSystems.dbo.final_year (Module_code, Module_description, Module_credits)
-VALUES
 ('BEL 300', 'The purpose of the module is to enable the learner to calculate the value-added tax liability and to journalise transactions; calculate the normal tax liability (including the determination of taxable capital gains and assessed capital losses) of individuals, companies, estates and trusts,discuss tax principles on value-added tax and normal tax; and calculate and discuss provisional and employees'' tax and to object against an assessment.' , 40),
 ('BEM 321', 'Strategic issues in marketing, strategic marketing, strategic analysis (market analysis, customer analysis, competitor analysis and internal analysis), market strategies (competitive strategies, strategies in the product life cycle and relationship building strategies) and strategy implementation and control.' , 20),
 ('GIS 310', 'Advanced theory and practice of Geographic Information Systems; GIS applications; design and implementation of GIS applications. A project or assignments of at least 64 notional hours. Diverse South African examples will be used to expose the students to various data sources, geospatial analyses, and data representation to support the UN Sustainable Development Goals.' , 22),
@@ -107,5 +116,12 @@ VALUES
 ('OBS 359', 'Introduction to international management. International business management; the process of internationalisation; growth in international trade and investment; the evolution of multinational enterprises; management perspectives on international trade and international trade theories; international trade regulation; economic integration; the formation of trading blocks, and free-trade areas. The international business environment. The cultural environment of international business; the political and legal environments as well as the economic environment of international business; the international monetary system; the foreign exchange market; and international capital markets.' , 20),
 ('OBS 370', 'Evaluates how to strategically align, plan for and direct investments in, and governance of, processes for continuous renewal of analytic deployments in business. An overview of analytics in the business context will be provided that will cover: concepts of strategic and operational analytics; overview of concepts like dimensional modeling, the Model Life cycle, data mining, big data, KPIs and metrics, ERP and analytics, in-database/memory analytics; real-time analytics and data stream analysis. The applied decision making aspect will focus on mastering quantitative modeling tools and techniques for business decision-making and deterministic optimisation techniques.' , 20),
 ('STK 310', 'Supervised learning.  Linear and non-linear regression. Ordinary least squares and maximum likelihood estimation. Violations of the assumptions, residual analysis. Cross validation. Statistical inference. Bootstrap inference. Supporting mathematical concepts. Statistical concepts are demonstrated and interpreted through practical coding and simulation within a data science framework.' , 25),
-('STK 353', 'Introduction to coding: data types, basic arithmetic, logical comparisons, functions, loops, conditional statements, packages. Data exploration and visualisation. Visualisation best practices. Data wrangling: data cleaning, missing values, duplicate data, outliers. Data transformation. Principal component analysis. Statistical coding. Algorithmic thinking.  Sampling: basic techniques in probability, non-probability, and resampling methods, Monte Carlo, probability integral transformation, bootstrap method, acceptance/rejection algorithm. Machine learning: train/test split, performance metrics, classification and clustering, performance metrics, cross-validation. Supervised and unsupervised learning: linear regression, decision tree, random forest, naïve Bayes, K-nearest neighbour, hierarchical clustering. Interpretation and communication of results. Text mining and analytics: topic modelling and word embeddings. Statistical concepts are demonstrated and interpreted through practical coding and simulation within a data science framework.' , 18);
+('STK 353', 'Introduction to coding: data types, basic arithmetic, logical comparisons, functions, loops, conditional statements, packages. Data exploration and visualisation. Visualisation best practices. Data wrangling: data cleaning, missing values, duplicate data, outliers. Data transformation. Principal component analysis. Statistical coding. Algorithmic thinking.  Sampling: basic techniques in probability, non-probability, and resampling methods, Monte Carlo, probability integral transformation, bootstrap method, acceptance/rejection algorithm. Machine learning: train/test split, performance metrics, classification and clustering, performance metrics, cross-validation. Supervised and unsupervised learning: linear regression, decision tree, random forest, naïve Bayes, K-nearest neighbour, hierarchical clustering. Interpretation and communication of results. Text mining and analytics: topic modelling and word embeddings. Statistical concepts are demonstrated and interpreted through practical coding and simulation within a data science framework.' , 18)
+)
+AS SOURCE (Module_code, Module_description, Module_credits)
+WHERE NOT EXISTS (
+    SELECT 1
+    FROM bit_infosystems.dbo.final_year AS TARGET
+    WHERE Target.module_credits=source.module_credits
+);
 GO

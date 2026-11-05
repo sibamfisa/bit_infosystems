@@ -36,3 +36,5 @@ BEGIN
 	)
 END;
 GO
+
+select distinct * from bit_infosystems.dbo.final_year
