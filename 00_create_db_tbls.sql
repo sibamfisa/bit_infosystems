@@ -37,4 +37,4 @@ BEGIN
 END;
 GO
 
-select distinct * from bit_infosystems.dbo.final_year
+select distinct * from bit_infosystems.dbo.second_year
